@@ -1,0 +1,170 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(145deg, #e8f1fa, #c4d7ee);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInContainer 1.2s ease-in-out;
+}
+
+@keyframes fadeInContainer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    animation: slideDownNavbar 1.5s ease forwards;
+}
+
+@keyframes slideDownNavbar {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.section {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInSection 0.8s ease-in-out forwards;
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: scale(1.02);
+}
+
+.section:nth-child(1) { animation-delay: 0.5s; }
+.section:nth-child(2) { animation-delay: 0.7s; }
+.section:nth-child(3) { animation-delay: 0.9s; }
+.section:nth-child(4) { animation-delay: 1.1s; }
+
+@keyframes fadeInSection {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.icon {
+    font-size: 2em;
+    color: #1a73e8;
+    margin-right: 20px;
+    transition: transform 0.4s ease;
+}
+
+.icon:hover {
+    animation: wiggle 0.6s ease infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+.text-content {
+    text-align: left;
+}
+
+.text-content h2 {
+    font-size: 1.7em;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.text-content p {
+    margin: 0 0 10px;
+    color: #555;
+}
+
+.button {
+    padding: 10px 24px;
+    color: #1a73e8;
+    background: rgba(255, 255, 255, 0.25);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px) scale(1.05);
+}
+
+#photoOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    animation: fadeInOverlay 0.4s ease;
+}
+
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#showphotos {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    animation: bounceIn 0.6s ease;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
