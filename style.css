@@ -181,3 +181,15 @@ body {
       padding: 10px; 
     }
 }    
+
+#close {
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    background: rgba(110, 108, 108, 0); 
+    color: white; 
+    font-size: 20px; 
+    border: none; 
+    padding: 5px 10px; 
+    cursor: pointer;
+}
