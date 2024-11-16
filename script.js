@@ -1,4 +1,4 @@
-const images = ["meme1.jpg", "meme2.jpg", "meme3.jpg", "meme4.jpg", "meme5.jpg"]
+const images = ["meme1.jpg", "meme2.jpg", "meme3.jpg", "meme4.jpg", "meme5.jpg", "meme6.png", "meme7.png"]
 let currentIndex = 0
 
 function showNextImage() {

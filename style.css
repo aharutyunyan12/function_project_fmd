@@ -58,8 +58,21 @@ body {
     padding: 8px 16px;
     background: rgba(255, 255, 255, 0.25);
     border-radius: 8px;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
     animation: pulse 1.5s infinite;
+}
+
+.navbar a:hover {
+    background: #1a73e8;
+    color: white;
+}
+
+.navbar a:active {
+    opacity: 0.5;
+}
+
+.button:active {
+    opacity: 0.5;
 }
 
 @keyframes pulse {
@@ -135,13 +148,18 @@ body {
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
     animation: pulse 2s infinite;
 }
 
 .button:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: #1a73e8;
+    color: white;
     transform: translateY(-3px) scale(1.05);
+}
+
+.button:active {
+    opacity: 0.5;
 }
 
 #photoOverlay {
