@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Race Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Math Race Game</h1>
+        <p>Լուծեք ֆունկցիաների առաջադրանքները 30 վայրկյանում:</p>
+        <p>Հաշվեք՝ f(x) = x²</p>
+        
+        <div id="question"></div>
+        
+        <input type="number" id="user-answer" placeholder="Ձեր պատասխանը" />
+        <button id="submit-answer">Ձևակերպել պատասխանը</button>
+        
+        <p>Ձեր միավորները՝ <span id="score">0</span></p>
+        <p>Նախատեսված ժամանակ՝ <span id="timer">30</span> վայրկյան</p>
+        
+        <p id="result"></p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
